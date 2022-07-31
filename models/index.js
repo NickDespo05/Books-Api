@@ -1,0 +1,9 @@
+require("dotenv");
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/books", {
+    useNewURLParser: true,
+    useUnifiedTopology: true,
+});
+
+module.exports.Book = require("./book");
